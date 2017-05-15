@@ -1,4 +1,4 @@
 ---
-name: Ava Sandler
-image_path: https://source.unsplash.com/bsU_7Ln2E2Y/600x800
+name: Dr. Jillian Horton
+image_path: 'http://umanitoba.ca/faculties/health_sciences/medicine/media/Jillian_Horton.jpg'
 ---
