@@ -1,76 +1,54 @@
-# ----
-# Site
-
 title: Medicine
-url: "https://ugmestudentaffairs.github.io/medicine-graphic-novel-website/"
+url: 'https://ugmestudentaffairs.github.io/medicine-graphic-novel-website/'
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
-snipcart_key: "NWNjOWZhYjctYmE1ZS00MDM3LThkNjUtZmE5M2NiMTU1NzAwNjM2MjYzNTE1MzM5ODg1ODkw"
-
-# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+snipcart_key: NWNjOWZhYjctYmE1ZS00MDM3LThkNjUtZmE5M2NiMTU1NzAwNjM2MjYzNTE1MzM5ODg1ODkw
 logo: /siteicon.png
-description: Fur t-shirt store
+description: Medicine Graphic Novel Website
 author:
   name: UGME Student Affairs
   email: UGMEStudentAffairs@gmail.com
-  twitter: fur # twitter username without the @ symbol
+  twitter: Pavel_Yarmak
 social:
   name: Medicine Graphic Novel
   links:
-    - https://github.com/UGMEStudentAffairs/medicine-graphic-novel-website
-
-# -----
-# Build
-
+    - 'https://github.com/UGMEStudentAffairs/medicine-graphic-novel-website'
 collections:
   staff_members:
     _hide_content: true
   products:
     _hide_content: true
     output: true
-
 permalink: pretty
-
 defaults:
-  -
-    scope:
-      path: ""
-      type: "products"
+  - scope:
+      path:
+      type: products
     values:
-      layout: "product"
-  -
-    scope:
-      path: ""
+      layout: product
+  - scope:
+      path:
     values:
-      layout: "page"
-  -
-    scope:
-      path: "index.html"
+      layout: page
+  - scope:
+      path: index.html
     values:
-      layout: "default"
-
+      layout: default
 jekyll-archives:
   enabled:
     - categories
-
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag
-
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - LICENCE
-
-# -----------
-# CloudCannon
-
 garment_types:
   - hat
   - top
-
 social_icons:
   - Email
   - Facebook
@@ -82,7 +60,6 @@ social_icons:
   - Twitter
   - YouTube
   - RSS
-
 _comments:
   map: Update the map location and display settings.
   latitude: Coordinates for the center marker on the map.
