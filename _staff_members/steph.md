@@ -1,4 +1,4 @@
 ---
-name: Steph Poco
-image_path: https://source.unsplash.com/h3vR1F8-caI/600x800
+name: GMB Chomichuk
+image_path: 'https://pbs.twimg.com/profile_images/793170387672498176/wZVW1CLq.jpg'
 ---
