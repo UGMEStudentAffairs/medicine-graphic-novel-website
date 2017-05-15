@@ -1,51 +1,72 @@
-title: Medicine
-url: 'https://ugmestudentaffairs.github.io/medicine-graphic-novel-website/'
+# ----
+# Site
+
+title: MEDICINE
+url: "http://early-goose.cloudvent.net/"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
-snipcart_key: NWNjOWZhYjctYmE1ZS00MDM3LThkNjUtZmE5M2NiMTU1NzAwNjM2MjYzNTE1MzM5ODg1ODkw
+snipcart_key: "NWNjOWZhYjctYmE1ZS00MDM3LThkNjUtZmE5M2NiMTU1NzAwNjM2MjYzNTE1MzM5ODg1ODkw"
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
 description: Medicine Graphic Novel Website
 author:
   name: UGME Student Affairs
   email: UGMEStudentAffairs@gmail.com
-  twitter: Pavel_Yarmak
+  twitter: Pavel_Yarmak # twitter username without the @ symbol
 social:
   name: Medicine Graphic Novel
   links:
-    - 'https://github.com/UGMEStudentAffairs/medicine-graphic-novel-website'
+    - https://github.com/UGMEStudentAffairs/medicine-graphic-novel-website
+
+# -----
+# Build
+
 collections:
   staff_members:
     _hide_content: true
   products:
     _hide_content: true
     output: true
+
 permalink: pretty
+
 defaults:
-  - scope:
-      path:
-      type: products
+  -
+    scope:
+      path: ""
+      type: "products"
     values:
-      layout: product
-  - scope:
-      path:
+      layout: "product"
+  -
+    scope:
+      path: ""
     values:
-      layout: page
-  - scope:
-      path: index.html
+      layout: "page"
+  -
+    scope:
+      path: "index.html"
     values:
-      layout: default
+      layout: "default"
+
 jekyll-archives:
   enabled:
     - categories
+
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - LICENCE
+
+# -----------
+# CloudCannon
+
 social_icons:
   - Email
   - Facebook
@@ -57,6 +78,7 @@ social_icons:
   - Twitter
   - YouTube
   - RSS
+
 _comments:
   map: Update the map location and display settings.
   latitude: Coordinates for the center marker on the map.
