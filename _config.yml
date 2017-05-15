@@ -46,9 +46,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENCE
-garment_types:
-  - hat
-  - top
 social_icons:
   - Email
   - Facebook
