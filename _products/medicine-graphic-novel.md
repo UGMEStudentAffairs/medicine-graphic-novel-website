@@ -2,7 +2,7 @@
 name: Medicine Graphic Novel
 price: '10'
 sku: MGN17
-description: >-
+description_markdown: >-
   MEDICINE - by Jillian Horton and GMB Chomichuk
 
 
