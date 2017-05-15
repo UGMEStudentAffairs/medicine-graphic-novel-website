@@ -1,32 +1,183 @@
 ---
-title: Medicine Graphic Novel
-hero: Medicine Graphic Novel
+title: MEDICINE Graphic Novel
+description: Welcome to our website
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+		{% seo %}
+		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+			<script>
+				(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
 
-<div class="content" id="products">
-	<section>
-		<div class="container">
-			<p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_products" class="btn"><strong>&#9998;</strong> Manage products</a></p>
-			<ul class="product-list">
-				{% for product in site.products %}
-					<li>
-					    <div class="styles">
-					        <div class="style">
-					            <a href="{{ product.url }}">
-			                    	<img src="{{ product.image }}">
-			                    </a>
-					        </div>
-					    </div>
-						<div class="product-details">
-							<h4><a href="{{ product.url }}">{{ product.name }}</a></h4>
-							<p>${{ product.price }}</p>
-						</div>
-					</li>
-				{% endfor %}
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-	</section>
-</div>
+				ga("create", "{{ site.google_analytics_key }}", "auto");
+				ga("send", "pageview");
+			</script>
+		{% endif %}
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		{% if site.snipcart_key %}
+			<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="{{ site.snipcart_key }}"></script>
+		{% endif %}
+		<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+  <!-- CSS  -->
+  <link href="{{ site.baseurl }}/parallax/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ site.baseurl }}/parallax/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+    .parallax-container {
+      height: 720px;
+    }
+    .staff-image {
+        margin: 25px auto 0 auto;
+        background: no-repeat center center;
+        background-size: cover;
+        border-radius: 300px;
+        width: 70%;
+        padding-bottom: 70%;
+    }
+    .name {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">{{ site.title }}</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#buy">Buy</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#buy">Buy</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">{{ page.title }}</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">{{ page.description }}</h5>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="{{ site.baseurl }}/images/background1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div id="about" class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        
+        {% for person in site.staff_members %}
+          <div class="col s12 m6">
+            <div class="staff-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
+            <div class="light name">{{ person.name }}</div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="row center">
+        <a href="{{ site.baseurl }}/about/" class="btn-large waves-effect waves-light teal lighten-1">Read More</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">MEDICINE - by Jillian Horton and GMB Chomichuk</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{{ site.baseurl }}/images/background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div id="contact" class="container">
+    <div class="section">
+      <div class="row center">
+        <h5 class="header col s12 light">Please leave us a message using our contact page:</h5>
+        <div class="row center">
+          <a href="{{ site.baseurl }}/contact/" class="btn-large waves-effect waves-light teal lighten-1">Contact Us Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="buy" class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Get yours today!</h5>
+          <div class="row center">
+            <a href="{{ site.baseurl }}/products/medicine-graphic-novel/" class="btn-large waves-effect waves-light teal lighten-1">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{{ site.baseurl }}/images/background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row" style="text-align: center;">
+           {% for column in site.data.footer %}
+          <div class="col l4 s12">
+            <ul>
+              <li>
+                <h4>{{ column.title }}</h4>
+              </li>
+              {% for link in column.links %}
+              <li><a class="white-text" {% if link.new_window %}target="_blank" {% endif %} href="{% include relative-src.html src=link.link %}"
+                  {% if link.social_icon %}class="{{ link.social_icon }}-icon" {% endif %}>
+								{{ link.name }}
+								{% if link.social_icon %}
+									{% include social-icon.html icon=link.social_icon %}
+								{% endif %}
+							</a></li>
+              {% endfor %}
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Website created by <a class="brown-text text-lighten-3" href="http://pavel.yarmak.me/">Pavel Yarmak</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{ site.baseurl }}/parallax/js/materialize.js"></script>
+  <script src="{{ site.baseurl }}/parallax/js/init.js"></script>
+
+  </body>
+</html>
