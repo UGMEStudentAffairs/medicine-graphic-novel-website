@@ -5,6 +5,13 @@ layout: default
 	<section class="page">
 		<div class="container">
 			<div class="product-container">
+			    <div class="styles">
+			        <div class="style">
+			            <a href="{{ product.url }}">
+	                    	<img src="{{ product.image }}">
+	                    </a>
+			        </div>
+			    </div>
 				<div class="product-details" id="add">
 					<h3>{{ page.name }} - ${{ page.price }}</h3>
 					{{ page.description_markdown | markdownify }}
