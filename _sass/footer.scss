@@ -78,6 +78,10 @@ footer {
 	position: relative;
 	background: $brand-color;
 	color: #fff;
+	
+	li {
+	    text-align: center;
+	}
 
 	.copyright {
 		font-size: .9rem;
