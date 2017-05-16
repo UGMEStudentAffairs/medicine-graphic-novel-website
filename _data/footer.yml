@@ -1,7 +1,7 @@
 - title: General
   links:
     - name: Products
-      link: /
+      link: /products/
     - name: Our Story
       link: /about/
     - name: Contact
@@ -22,7 +22,7 @@
       link: 'https://www.instagram.com/'
       new_window: true
       social_icon: Instagram
-    - name: "@Fur"
+    - name: '@Fur'
       link: 'https://www.twitter.com'
       new_window: true
       social_icon: Twitter
