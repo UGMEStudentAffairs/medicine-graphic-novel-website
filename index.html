@@ -33,6 +33,9 @@ layout: null
   <link href="{{ site.baseurl }}/parallax/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{{ site.baseurl }}/parallax/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style>
+    body {
+      font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
+      -webkit-font-smoothing: antialiased; }
     .parallax-container {
       height: 720px;
     }
@@ -49,10 +52,90 @@ layout: null
       text-align: center;
       margin-top: 20px;
     }
+    
+.footer-links {
+  width: 100%;
+  margin: 10px;
+  padding: 0; }
+  @media (min-width: 450px) {
+    .footer-links {
+      -webkit-flex: 1 0 180px;
+      flex: 1 0 180px; }
+      .footer-links:last-child {
+        text-align: right; } }
+  .footer-links h4 {
+    color: #fff;
+    margin: 0 0 20px 0; }
+  .footer-links li {
+    list-style: none;
+    margin: 15px auto; }
+    .footer-links li a:hover {
+      text-decoration: none; }
+    .footer-links li a svg {
+      fill: #fff;
+      margin-left: 10px;
+      transition: fill 0.2s ease;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      width: 22px;
+      height: 22px; }
+    .footer-links li a:hover svg {
+      fill: #fff; }
+    .footer-links li a.twitter-icon:hover svg {
+      fill: #55acee; }
+    .footer-links li a.google-plus-icon:hover svg {
+      fill: #db4437; }
+    .footer-links li a.youtube-icon:hover svg {
+      fill: #cd201f; }
+    .footer-links li a.instagram-icon:hover svg {
+      fill: #f167f5; }
+    .footer-links li a.linkedin-icon:hover svg {
+      fill: #0077b5; }
+    .footer-links li a.pinterest-icon:hover svg {
+      fill: #bd081c; }
+    .footer-links li a.rss-icon:hover svg {
+      fill: #f26522; }
+
+      footer {
+        padding: 50px 0 50px 0;
+        font-size: 1.1rem;
+        position: relative;
+        background: #009485;
+        color: #fff; }
+        footer li {
+          text-align: center; }
+        footer .copyright {
+          font-size: .9rem;
+          margin: 20px auto 0;
+          color: #fff; }
+          @media (min-width: 450px) {
+            footer .copyright {
+              text-align: center; } }
+        footer,
+        footer a {
+          color: #fff; }
+        footer h2 {
+          font-size: 1.4rem;
+          margin: 30px 0;
+          color: #fff; }
+        footer .footer-columns {
+          -webkit-flex-flow: wrap;
+          -moz-flex-flow: wrap;
+          -ms-flex-flow: wrap;
+          flex-flow: wrap;
+          margin: -10px -10px 10px -10px; }
+        footer a {
+          text-decoration: none; }
+          footer a:hover {
+            color: #fff; }
+        nav a {
+          color: #fff !important;
+        }
   </style>
 </head>
 <body>
-  <nav class="white" role="navigation">
+  <nav class="teal" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">{{ site.title }}</a>
       <ul class="right hide-on-med-and-down">
@@ -149,7 +232,7 @@ layout: null
       <div class="row" style="text-align: center;">
            {% for column in site.data.footer %}
           <div class="col l4 s12">
-            <ul>
+            <ul class="footer-links">
               <li>
                 <h4>{{ column.title }}</h4>
               </li>
@@ -165,10 +248,8 @@ layout: null
           </div>
           {% endfor %}
       </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Website created by <a class="brown-text text-lighten-3" href="http://pavel.yarmak.me/">Pavel Yarmak</a>
+      <div class="row">
+				<p class="copyright">Website created by <a href="http://pavel.yarmak.me/">Pavel Yarmak</a>&nbsp;&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
       </div>
     </div>
   </footer>
